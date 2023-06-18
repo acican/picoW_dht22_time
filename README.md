@@ -1,4 +1,6 @@
 # picoW_dht22_time
+![IMG_1452](https://github.com/acican/picoW_dht22_time/assets/10486613/3d2ef213-c1d8-4861-bb94-3762ba0e1ee8)
+
  
 Un exemplu de cod in micropython pentru afisarea temperaturii si a umiditatii urmarind ora exacta, folosind controlerul Raspberry pico W.
 - Raspberry pico W
