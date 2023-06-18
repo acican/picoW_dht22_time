@@ -12,9 +12,4 @@ Conectarea la reteaua wifi se face prin libraria "network", furnizand ssid si pa
 Dupa conectare se acceseaza serverul ntp printr-o conexiune tip socket.
 Afisarea se face pe un display SSD1315 conectat la microcontroler printr-o conexiune I2C, folosind libraria micropython "ssd1306".
 Se afiseaza sirurile preformatate, data si ora, temperatura si umiditatea, cu cadenta de o secunda, intr-o bucla infinita.
-
-Obs:
-- timpul dat de serverul ntp are ca origine anul 1900, cel folosit in python are referinta anul 1970 (de fapt in majoritatea librariilor ce
-trateaza timpul). Pentru aceasta se introduce valoarea de corectie NTP_1970. Origine de timp pe picoW este 2021 (01-01-2021 00:00:00). Aceasta e data afisata de microcontroler in lipsa sincronizarii.
-- pentru corectia de fus orar (+2, Bucuresti) se insumeaza diferenta la ora. De asemenea trebuie avuta in vedere si corectia pentru ora de vara (+1).
-- o sincronizare precisa a timpului trebuie sa ia in calcul si eventualele intarzieri in retea, calculul valoarii acestora este o problema mai complicata si se poate rezolva raportandu-ne la diferenta de timp determinata pe ceasul local.
+Senzorul de temperatura si umiditate comunica cu controlerul printr-o conexiune pe 1 fir (in exemplu, de cod, pinul 20) prin intermediul librariei micropython "dht".
